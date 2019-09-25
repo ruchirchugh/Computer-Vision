@@ -1,0 +1,23 @@
+function camera_matrix = perspective_calibration(correspondences)
+camera_matrix = zeros(3,4);
+matrixA = [];
+b = [];
+[n,~] = size(correspondences);
+for i=1:n
+    x = correspondences(i,1);
+    y = correspondences(i,2);
+    z = correspondences(i,3);
+    u = correspondences(i,4);
+    v = correspondences(i,5);
+    row1 = [x,y,z,1,0,0,0,0,-x*u,-y*u,-z*u];
+    matrixA = [matrixA;row1];
+    row2 = [0,0,0,0,x,y,z,1,-x*v,-y*v,-z*v];
+    matrixA = [matrixA;row2];
+    b = [b;u];
+    b = [b;v];
+end
+x = matrixA\b;
+x = [x;1];
+camera_matrix(1,:) = x(1:4,1);
+camera_matrix(2,:) = x(5:8,1);
+camera_matrix(3,:) = x(9:12,1);
