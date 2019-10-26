@@ -1,6 +1,7 @@
+Ruchir Chugh
 
-Name - Ruchir Chugh
-UTA ID - 1001506316
+Problem statement- http://vlm1.uta.edu/~athitsos/courses/cse4310_spring2019/assignments
+
 
 TASK 2 -
 In Task 2 using connected components I am finding the area of the person, depending on threshold value I have given a specific amount of area above which it ensures that person is present.
