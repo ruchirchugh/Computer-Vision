@@ -1,5 +1,6 @@
-Name - Ruchir Chugh
-UTA Id - 1001506316
+Ruchir Chugh
+
+Problem statement- http://vlm1.uta.edu/~athitsos/courses/cse4310_spring2019/assignments
 
 TASK1 - To send a file in a binary image either first store the matrix of an image in another variable and then send it to remove_holes-
 
